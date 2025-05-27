@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Dinámico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodoro Dinámico</h1>
+        <form id="intervalForm">
+            <div id="intervalInputs">
+                <div class="interval">
+                    <input type="number" placeholder="Minutos" min="0" class="minutes" value="1">
+                    <input type="number" placeholder="Segundos" min="0" max="59" class="seconds" value="0">
+                    <input type="url" placeholder="URL del sonido" class="sound" value="https://raw.githubusercontent.com/user1/repo1/main/mixkit-fast-rocket-whoosh-1714.wav">
+                    <button type="button" class="remove">Eliminar</button>
+                </div>
+                <div class="interval">
+                    <input type="number" placeholder="Minutos" min="0" class="minutes" value="5">
+                    <input type="number" placeholder="Segundos" min="0" max="59" class="seconds" value="0">
+                    <input type="url" placeholder="URL del sonido" class="sound" value="https://raw.githubusercontent.com/user1/repo1/main/mixkit-medieval-show-fanfare-announcement-226.wav">
+                    <button type="button" class="remove">Eliminar</button>
+                </div>
+            </div>
+            <button type="button" id="addInterval">Agregar Intervalo</button>
+        </form>
+        <div id="controls">
+            <input type="number" id="countdownMinutes" placeholder="Duración total (min)" value="25" min="0">
+            <input type="number" id="countdownSeconds" placeholder="Duración total (seg)" value="0" min="0" max="59">
+            <button id="startButton">Iniciar Temporizador</button>
+            <button id="stopButton">Detener Temporizador</button>
+        </div>
+        <div id="timerDisplay">00:00</div>
+        <div id="statusDisplay">Estado: Preparado</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
